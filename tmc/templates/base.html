@@ -1,0 +1,20 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Time Machine Commander</title>
+
+        <!-- jQuery 3 -->
+        <script src="{% static 'plugins/jquery3/jquery-3.3.1.min.js' %}"></script>
+
+        <!-- Bootstrap 3 -->
+        <link rel="stylesheet" href="{% static 'plugins/bootstrap3/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'plugins/bootstrap3/css/bootstrap-theme.min.css' %}">
+        <script src="{% static 'plugins/bootstrap3/js/bootstrap.min.js' %}"></script>
+    </head>
+    <body>
+        {% block content %}
+
+        {% endblock content %}
+    </body>
+</html>
