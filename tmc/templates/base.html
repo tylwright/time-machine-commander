@@ -11,10 +11,20 @@
         <link rel="stylesheet" href="{% static 'plugins/bootstrap3/css/bootstrap.min.css' %}">
         <link rel="stylesheet" href="{% static 'plugins/bootstrap3/css/bootstrap-theme.min.css' %}">
         <script src="{% static 'plugins/bootstrap3/js/bootstrap.min.js' %}"></script>
+
+        <!-- DataTables 1 -->
+        <link rel="stylesheet" type="text/css" href="{% static 'plugins/datatables1/css/datatables.min.css' %}"/>
+        <script type="text/javascript" src="{% static 'plugins/datatables1/js/datatables.min.js' %}"></script>
+
+        <!-- Custom -->
+        <link rel="stylesheet" href="{% static 'css/global.css' %}">
     </head>
     <body>
-        {% block content %}
+        {% include "top_nav.html" %}
+        <div class="container-fluid">
+            {% block content %}
 
-        {% endblock content %}
+            {% endblock content %}
+        </div>
     </body>
 </html>

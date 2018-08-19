@@ -1,5 +1,143 @@
 {% extends "base.html" %}
-
 {% block content %}
-    <button class="btn btn-primary">taco</button>
+    <script>
+        $(document).ready(function() {
+            $('#enrolledUsersTable').DataTable();
+        } );
+    </script>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">System</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-condensed">
+                            <tbody>
+                                <tr>
+                                    <th>Hostname</th>
+                                    <td>timemachine.domain.com</td>
+                                </tr>
+                                <tr>
+                                    <th>OS</th>
+                                    <td>CentOS 7.5</td>
+                                </tr>
+                                <tr>
+                                    <th>RAM</th>
+                                    <td>4GB</td>
+                                </tr>
+                                <tr>
+                                    <th>Local Storage</th>
+                                    <td>40GB (10% used)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">TMC Components</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-condensed">
+                            <tbody>
+                                <tr>
+                                    <th>System Health</th>
+                                    <td><span class="text-success"><b>Healthy</b></span></td>
+                                </tr>
+                                <tr>
+                                    <th>TMC Version</th>
+                                    <td>0.0.0 (Prototype)</td>
+                                </tr>
+                                <tr>
+                                    <th>Netatalk Version</th>
+                                    <td>3.1.11</td>
+                                </tr>
+                                <tr>
+                                    <th>Avahi Version</th>
+                                    <td>0.6.31</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Notifications</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive">
+                        <table class="table table-condensed">
+                            <tbody>
+                            <tr>
+                                <th>Newly deactivated users with backups</th>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <th>Acknowledged deactivated users with backups</th>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <th>Users over quota</th>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <th>System errors</th>
+                                <td>0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Enrolled Users</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-condensed table-hover" id="enrolledUsersTable">
+                        <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Size</th>
+                            <th>Devices</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Wright, Tyler</td>
+                            <td>252GB</td>
+                            <td>1</td>
+                            <td>
+                                <span class="glyphicon glyphicon-menu-right"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Picard, Jean-Luc</td>
+                            <td>53GB</td>
+                            <td>1</td>
+                            <td>
+                                <span class="glyphicon glyphicon-menu-right"></span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock content %}

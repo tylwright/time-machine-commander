@@ -1,0 +1,8 @@
+body {
+    background-color: #FAFAFA;
+}
+
+.panel-body > .table-responsive {
+    margin-bottom: 0;
+    border: 0;
+}
