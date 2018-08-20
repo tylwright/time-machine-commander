@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+    <script>
+        $(document).ready(function() {
+            $('#usersTable').DataTable();
+        } );
+    </script>
+
+    <div class="row">
+        <div class="col-md-6">
+            <p>This view shows all users who are active in AD and in TMC.  This means that these individuals have backup
+                shares which are enabled.</p>
+            <!--<h4>Active in AD and TMC</h4>
+            <dl>
+                <dt>Users</dt>
+                <dd>A list of all active users in AD</dd>
+            </dl>
+            <h4>Deactivated in AD</h4>
+            <dl>
+                <dt>Newly Deactivated</dt>
+                <dd>Users who are disabled in AD but their backup share (w/backups) still exists.  Awaits admin action.</dd>
+                <dt>Acknowledged Deactivations</dt>
+                <dd>Admin has decided to keep backup share (w/backups) enabled for disabled user.</dd>
+                <dt>Closed Accounts</dt>
+                <dd>Admin has decided to delete share w/backups.</dd>
+            </dl>-->
+        </div>
+        <div class="col-md-6">
+            <div>
+                Show...
+                <select class="form-control">
+                    <optgroup label="Active in AD">
+                        <option>All Users</option>
+                    </optgroup>
+                    <optgroup label="Deactivated in AD">
+                        <option>Newly Deactivated (Action required)</option>
+                        <option>Acknowledged Deactivations</option>
+                    </optgroup>
+                    <optgroup label="Deactivated in AD and TMC">
+                        <option>All Users</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-md-12">
+            <div class="well">
+                <table class="table table-hover" id="usersTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Username</th>
+                            <th>Size</th>
+                            <th>Number of Devices</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

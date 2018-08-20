@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render_to_response
 
-# Create your views here.
+
+def settings(request):
+    return render_to_response('settings.html', locals())
+
+
+def settings_share_permissions(request):
+    return render_to_response('settings_share_permissions.html', locals())
