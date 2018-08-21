@@ -3,11 +3,21 @@
     <div class="row">
         {% include "settings_nav.html" %}
         <div class="col-md-8">
-            <div class="well well-sm">
+            <div class="well well-sm clearfix">
                 <form>
+                    <h4>Additional Permissions</h4>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        <label for="adGroup-ro-all-shares">AD group with read-only access to ALL shares</label>
+                        <span class="glyphicon glyphicon-question-sign pull-right"></span>
+                        <input type="text" class="form-control" id="adGroup-ro-all-shares" placeholder="ex. Management">
+                    </div>
+                    <div class="form-group">
+                        <label for="adGroup-rw-all-shares">AD group with read/write access to ALL shares</label>
+                        <span class="glyphicon glyphicon-question-sign pull-right"></span>
+                        <input type="text" class="form-control" id="adGroup-ro-all-shares" placeholder="ex. DevOps">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary pull-right">Save</button>
                     </div>
                 </form>
             </div>

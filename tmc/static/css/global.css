@@ -2,7 +2,26 @@ body {
     background-color: #FAFAFA;
 }
 
+/* Panel w/table override to save space */
 .panel-body > .table-responsive {
     margin-bottom: 0;
     border: 0;
+}
+
+.navbar, .navbar-default {
+    background-color: black;
+    background-image: none;
+}
+
+.navbar-brand{
+    color: lightgrey !important;
+}
+
+.navbar-nav > li > a {
+    color: lightgrey !important;
+}
+
+/* Useful for when you have a table and you don't want all rows to show the hover indication. */
+.table-row-hover:hover {
+    background-color: #f5f5f5;
 }
