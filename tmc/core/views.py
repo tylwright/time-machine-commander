@@ -7,3 +7,7 @@ def settings(request):
 
 def settings_share_permissions(request):
     return render_to_response('settings_share_permissions.html', locals())
+
+
+def settings_backup(request):
+    return render_to_response('settings_backups.html', locals())
