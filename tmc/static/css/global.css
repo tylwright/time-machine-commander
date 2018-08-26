@@ -30,3 +30,8 @@ body {
 .table-row-hover:hover {
     background-color: #f5f5f5;
 }
+
+/* Useful for when you have a table with hover and you don't want a row to show the hover indication. */
+.no-hover:hover {
+    background-color: transparent !important;
+}

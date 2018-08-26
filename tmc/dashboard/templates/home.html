@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load dashboard_filters %}
 {% block content %}
     <script>
         $(document).ready(function() {
@@ -61,12 +62,12 @@
                                 </tr>
                                 <tr>
                                     <th>Netatalk Version</th>
-                                    <td>3.1.11</td>
+                                    <td>{{ None|get_netatalk_version }}</td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <th>Avahi Version</th>
-                                    <td>0.6.31</td>
+                                    <td>{{ None|get_avahi_version }}</td>
                                     <td></td>
                                 </tr>
                             </tbody>
@@ -97,7 +98,7 @@
                                 <td>0</td>
                                 <td><span class="glyphicon glyphicon-menu-right"></span></td>
                             </tr>
-                            <tr>
+                            <tr class="no-hover">
                                 <th>&nbsp;</th>
                                 <td></td>
                                 <td></td>
