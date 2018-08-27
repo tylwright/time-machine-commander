@@ -4,7 +4,65 @@
     <div class="row">
         {% include "settings_nav.html" %}
         <div class="col-md-8">
-
+            <label>Choose what you wish to backup:</label>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Third Party Services</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-inline">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> /etc/avahi
+                            </label>
+                        </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> /etc/fstab
+                            </label>
+                        </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> /etc/netatalk
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Time Machine Commander</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-inline">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Database
+                            </label>
+                        </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Logs
+                            </label>
+                        </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Web App
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-inline">
+                <button class="btn btn-default pull-right">
+                    <span class="glyphicon glyphicon-download-alt"></span>
+                    &nbsp; Download
+                </button>
+            </div>
         </div>
     </div>
 {% endblock %}
