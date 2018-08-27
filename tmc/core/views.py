@@ -9,5 +9,9 @@ def settings_share_permissions(request):
     return render_to_response('settings_share_permissions.html', locals())
 
 
-def settings_backup(request):
+def settings_backups(request):
     return render_to_response('settings_backups.html', locals())
+
+
+def settings_configs(request):
+    return render_to_response('settings_configs.html', locals())

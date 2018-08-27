@@ -19,5 +19,6 @@ urlpatterns = [
     # Settings
     url(r'^settings/$', core_views.settings),
     url(r'^settings/share-permissions/', core_views.settings_share_permissions),
-    url(r'^settings/backup/', core_views.settings_backup)
+    url(r'^settings/backups/', core_views.settings_backups),
+    url(r'^settings/configs/', core_views.settings_configs),
 ]
