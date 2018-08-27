@@ -7,18 +7,18 @@
             <div class="form-inline">
                 <select class="form-control" id="config-file-selector">
                     <option>Select a file to view...</option>
-                    <optgroup label="/etc/avahi">
-                        <option value="avahi-daemon">avahi-daemon.conf</option>
+                    <optgroup label="/etc/avahi/">
+                        <option value="avahi-daemon.conf">avahi-daemon.conf</option>
                     </optgroup>
-                    <optgroup label="/etc/netatalk">
-                        <option value="afp">afp.conf</option>
-                        <option value="afpd">afpd.conf</option>
-                        <option value="AppleVolumes">AppleVolumes.default</option>
+                    <optgroup label="/etc/netatalk/">
+                        <option value="afp.conf">afp.conf</option>
+                        <option value="afpd.conf">afpd.conf</option>
+                        <option value="AppleVolumes.default">AppleVolumes.default</option>
                     </optgroup>
-                    <option disabled="disabled">Note: Some files are hidden from this dropdown.</option>
+                    <option disabled="disabled">Note: Some files are hidden from this dropdown menu.</option>
                 </select>
                 <div class="btn-group pull-right">
-                    <button class="btn btn-default">
+                    <button class="btn btn-default" id="download-file" style="display: none;">
                         <span class="glyphicon glyphicon-download-alt"></span>
                         &nbsp; Download this File
                     </button>
@@ -29,28 +29,41 @@
     </div>
 
     <script>
+        // Config file selector and viewer
         $( "#config-file-selector" ).change(function() {
             switch ($( "#config-file-selector" ).val()){
-                case "avahi-daemon":
+                case "avahi-daemon.conf":
                     $( "#config-viewer" ).show();
+                    $( "#download-file" ).show();
                     $( "#config-viewer" ).html("{{ None|read_avahi_daemon_config|safe }}");
                     break;
-                case "afp":
+                case "afp.conf":
                     $( "#config-viewer" ).show();
+                    $( "#download-file" ).show();
                     $( "#config-viewer" ).html("{{ None|read_netatalk_afp_config|safe }}");
                     break;
-                case "afpd":
+                case "afpd.conf":
                     $( "#config-viewer" ).show();
+                    $( "#download-file" ).show();
                     $( "#config-viewer" ).html("{{ None|read_netatalk_afpd_config|safe }}");
                     break;
-                case "AppleVolumes":
+                case "AppleVolumes.default":
                     $( "#config-viewer" ).show();
+                    $( "#download-file" ).show();
                     $( "#config-viewer" ).html("{{ None|read_netatalk_volumes_config|safe }}");
                     break;
                 default:
+                    $( "#download-file" ).hide();
                     $( "#config-viewer" ).hide();
                     break;
             }
+        });
+
+        // Config file downloader
+        $( "#download-file" ).click(function() {
+            let file = $( "#config-file-selector" ).val();
+            let path = '/downloads/' + file;
+            window.open(path, '_blank');
         });
     </script>
 {% endblock %}

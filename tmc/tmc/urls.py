@@ -21,4 +21,7 @@ urlpatterns = [
     url(r'^settings/share-permissions/', core_views.settings_share_permissions),
     url(r'^settings/backups/', core_views.settings_backups),
     url(r'^settings/configs/', core_views.settings_configs),
+
+    # Downloads
+    url(r'^downloads/(?P<file>[-\w.]+)/$', core_views.download_configs)
 ]
