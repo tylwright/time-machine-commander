@@ -9,6 +9,9 @@ urlpatterns = [
     # Admin stuffs
     url(r'^admin/', admin.site.urls),
 
+    # Login
+    url(r'^login/', dashboard_views.login),
+
     # Dashboard
     url(r'^$', dashboard_views.index),
     url(r'^home/', dashboard_views.index),
